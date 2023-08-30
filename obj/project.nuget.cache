@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XIPLqCI1B4MMJDNaqa38lX45F6XJtQoOSjfPKQ5iIlmeBAdHDvBlkBgoM5lD5oN4ukSJh+NHykZNHEN2RcgZSA==",
+  "dgSpecHash": "MwmnBD7dBCnbkAh5xLnb5gNz6KCeBjdG2QeKv5aTC435LkuViLa5lRIVE23ltzZ+zF6jq8zxA5FyWE4iaKXLIw==",
   "success": true,
   "projectFilePath": "/Users/jervinmacalawa/Projects/evaluation/evaluation/evaluation.csproj",
   "expectedPackageFiles": [
@@ -48,6 +48,8 @@
     "/Users/jervinmacalawa/.nuget/packages/microsoft.win32.registry/5.0.0/microsoft.win32.registry.5.0.0.nupkg.sha512",
     "/Users/jervinmacalawa/.nuget/packages/microsoft.win32.systemevents/5.0.0/microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "/Users/jervinmacalawa/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
+    "/Users/jervinmacalawa/.nuget/packages/npgsql/7.0.4/npgsql.7.0.4.nupkg.sha512",
+    "/Users/jervinmacalawa/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.4/npgsql.entityframeworkcore.postgresql.7.0.4.nupkg.sha512",
     "/Users/jervinmacalawa/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/jervinmacalawa/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/Users/jervinmacalawa/.nuget/packages/system.configuration.configurationmanager/5.0.0/system.configuration.configurationmanager.5.0.0.nupkg.sha512",

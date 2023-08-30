@@ -47,3 +47,45 @@ button.accept-policy[b-72wgjkt4ky] {
   line-height: 60px;
 }
 
+#sidebar[b-72wgjkt4ky] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #37474f;
+    color: white;
+    padding-top: 20px;
+    overflow-y: auto; /* Add scroll if content exceeds sidebar height */
+}
+
+.sidebar-header[b-72wgjkt4ky] {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-nav[b-72wgjkt4ky] {
+    list-style: none;
+    padding: 0;
+}
+
+    .sidebar-nav li[b-72wgjkt4ky] {
+        padding: 10px;
+        transition: background-color 0.3s;
+    }
+
+        .sidebar-nav li:hover[b-72wgjkt4ky] {
+            background-color: #546e7a;
+        }
+
+    .sidebar-nav a[b-72wgjkt4ky] {
+        color: white;
+        text-decoration: none;
+    }
+
+    .sidebar-nav i[b-72wgjkt4ky] {
+        margin-right: 10px;
+    }
+#content[b-72wgjkt4ky], body[b-72wgjkt4ky] {
+    box-sizing: border-box;
+}

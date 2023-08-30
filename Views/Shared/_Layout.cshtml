@@ -9,10 +9,24 @@
     <link rel="stylesheet" href="~/evaluation.styles.css" asp-append-version="true" />
 </head>
 <body>
+    @if (ViewBag.CurrentPage != "Index" && ViewBag.CurrentPage != "Login" && ViewBag.CurrentPage != "Register")
+    {
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h3>App Name</h3>
+            </div>
+            <ul class="sidebar-nav">
+                <li><a href="#"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Customers</a></li>
+                <!-- ... add more sidebar items ... -->
+            </ul>
+        </div>
+    }
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">evaluation</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AppName</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>

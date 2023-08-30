@@ -13,7 +13,7 @@ namespace evaluation.Data // Update with your actual namespace
         }
 
         // DbSet properties for your entity models
-        public DbSet<User> Users { get; set; }
+        public DbSet<UserModel> Users { get; set; }
         // Add more DbSet properties as needed
     }
 }

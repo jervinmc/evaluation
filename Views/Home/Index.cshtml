@@ -2,13 +2,13 @@
     ViewData["Title"] = "Login";
 }
 
-@model evaluation.Models.User
+@model evaluation.Models.AuthenticationModel
 
 <div class="container">
     <h2 class="text-center">Login</h2>
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <form asp-action="Login" method="post">
+            <form method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Email"></label>
@@ -26,3 +26,7 @@
         </div>
     </div>
 </div>
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-error mt-3">@ViewBag.Message</div>
+}

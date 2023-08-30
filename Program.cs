@@ -3,8 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Npgsql.EntityFrameworkCore.PostgreSQL;
+
 using evaluation.Data; // Make sure to replace 'YourNamespace' with the actual namespace
-using evaluation.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,12 +25,12 @@ string dbUser = configuration["DB_USER"];
 string dbPassword = configuration["DB_PASSWORD"];
 
 // Construct the connection string using the values from configuration
-string connectionString = $"Server=db4free.net;Database=appdbs;User=jmacalawa;Password=wew123WEW;";
+string connectionString = $"Server=localhost;Database=test2;Username=postgres;Password=wew123WEW;Port=5431;";
 
 try
 {
     builder.Services.AddDbContext<AppDbContext>(options =>
-        options.UseSqlServer(connectionString));
+        options.UseNpgsql(connectionString));
 }
 catch (Exception ex)
 {

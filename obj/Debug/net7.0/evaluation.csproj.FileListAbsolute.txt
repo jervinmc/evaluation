@@ -74,3 +74,5 @@
 /Users/jervinmacalawa/Projects/evaluation/evaluation/bin/Debug/net7.0/Mono.TextTemplating.dll
 /Users/jervinmacalawa/Projects/evaluation/evaluation/bin/Debug/net7.0/System.CodeDom.dll
 /Users/jervinmacalawa/Projects/evaluation/evaluation/bin/Debug/net7.0/web.config
+/Users/jervinmacalawa/Projects/evaluation/evaluation/bin/Debug/net7.0/Npgsql.dll
+/Users/jervinmacalawa/Projects/evaluation/evaluation/bin/Debug/net7.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll

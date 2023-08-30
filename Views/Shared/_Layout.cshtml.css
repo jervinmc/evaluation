@@ -47,3 +47,45 @@ button.accept-policy {
   line-height: 60px;
 }
 
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #37474f;
+    color: white;
+    padding-top: 20px;
+    overflow-y: auto; /* Add scroll if content exceeds sidebar height */
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+    .sidebar-nav li {
+        padding: 10px;
+        transition: background-color 0.3s;
+    }
+
+        .sidebar-nav li:hover {
+            background-color: #546e7a;
+        }
+
+    .sidebar-nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .sidebar-nav i {
+        margin-right: 10px;
+    }
+#content, body {
+    box-sizing: border-box;
+}

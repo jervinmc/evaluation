@@ -1,43 +1,46 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using evaluation.Models;
+using evaluation.Data;
 
-namespace evaluation.Controllers;
-
-public class RegisterController : Controller
+namespace evaluation.Controllers
 {
-    private readonly ILogger<RegisterController> _logger;
-
-    public RegisterController(ILogger<RegisterController> logger)
+    public class RegisterController : Controller
     {
-        _logger = logger;
-    }
+        private readonly ILogger<RegisterController> _logger;
+        private readonly AppDbContext _dbContext; // Add this field
 
-    public IActionResult Index()
-    {
-        
-        return View();
-    }
-
-
-    [HttpPost]
-    public IActionResult Index(RegisterViewModel model)
-    {
-
-        if (ModelState.IsValid)
+        public RegisterController(ILogger<RegisterController> logger, AppDbContext dbContext) // Add AppDbContext parameter
         {
-            ViewBag.Message = "Registration successful!";
+            _logger = logger;
+            _dbContext = dbContext;
+        }
+
+        public IActionResult Index()
+        {
+            ViewBag.CurrentPage = "Register";
             return View();
         }
 
-        return View(model);
-    }
+        [HttpPost]
+        public IActionResult Index(UserModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                _dbContext.Users.Add(model);
+                _dbContext.SaveChanges();
 
+                ViewBag.Message = "Registration successful!";
+                return View();
+            }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(model);
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
 }
-
